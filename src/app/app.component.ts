@@ -14,6 +14,6 @@ export class AppComponent {
     return this.model.user;
   }
   getTodoItems(){
-    return this.model.items;
+    return this.model.items.filter((item: { done: boolean; })=>!item.done);
   }
 }

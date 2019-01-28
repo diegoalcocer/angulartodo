@@ -8,7 +8,7 @@ export class Model {
     items: any;
     constructor(){
         this.user = "Diego";
-        this.items = [new TodoItem("Buy Flowers", false), new TodoItem("Get Shoes", false)]
+        this.items = [new TodoItem("Buy Flowers", false), new TodoItem("Get Shoes", false), new TodoItem("Create Web App", true)]
     }
 }
 export class TodoItem{
