@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model';
+import { Model, TodoItem } from './model';
 
 @Component({
   // selector: 'app-root',
@@ -15,5 +15,10 @@ export class AppComponent {
   }
   getTodoItems(){
     return this.model.items.filter((item: { done: boolean; })=>!item.done);
+  }
+  addItem(newItem: any){
+    if(newItem != ""){
+      this.model.items.push(new TodoItem(newItem,false));
+    }
   }
 }
